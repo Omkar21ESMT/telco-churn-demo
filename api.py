@@ -4,7 +4,7 @@ Add fastapi and uvicorn to your environment with:
     uv add fastapi uvicorn
 
 To serve the API, run:
-    
+
 
 """
 
@@ -37,7 +37,8 @@ def predict_schema():
     """Describe the expected fields for /predict."""
     return Customer.model_json_schema()
 
+
 @app.get("/health")
 def health():
     """Check if the service is running."""
-    return{"health": "ok"}
+    return {"health": "ok"}

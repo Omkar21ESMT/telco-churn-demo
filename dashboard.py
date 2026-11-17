@@ -41,9 +41,7 @@ st.write("Enter customer details and get a churn prediction.")
 
 tenure = st.selectbox("Tenure (mths)", options=list(range(121)))
 
-monthly = st.slider(
-    "Monthly Charges", min_value=0, max_value=1000, step=10, value=70
-)
+monthly = st.slider("Monthly Charges", min_value=0, max_value=1000, step=10, value=70)
 
 techsupport = int(st.toggle("Tech Support", value=False))
 
@@ -60,7 +58,7 @@ try:
     st.subheader("Result")
     st.write(f"Model prediction: **{prediction}**")
 
-    #st.json(data)
+    # st.json(data)
 
 except requests.RequestException as e:
     st.error(f"Error calling API: {e}")
